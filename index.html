@@ -21,7 +21,7 @@
         <a href="#contact" class="hover:text-red-600">Kontakt</a>
         <a href="#documents" class="hover:text-red-600">Dokumenty</a>
         <a href="#support" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Wesprzyj</a>
-        <span class="ml-6 text-sm text-gray-400">PL | BY | EN</span>
+        <span class="ml-6 text-sm text-gray-400 cursor-pointer" id="lang-switcher">PL | BY | EN</span>
       </div>
     </div>
   </header>
@@ -31,54 +31,24 @@
 
     <section id="hero" class="text-center">
       <img src="./logo-black.png" class="mx-auto h-24 mb-4" alt="AIST logo"/>
-      <h1 class="text-3xl font-bold">AIST. Przestrzeń możliwości</h1>
+      <h1 class="text-3xl font-bold" lang="pl">AIST. Przestrzeń możliwości</h1>
+      <h1 class="text-3xl font-bold hidden" lang="by">AIST. Прастора магчымасцей</h1>
+      <h1 class="text-3xl font-bold hidden" lang="en">AIST. Space of opportunities</h1>
       <a href="#support" class="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">Wesprzyj</a>
     </section>
 
     <section id="mission">
       <h2 class="text-xl text-red-600 font-bold mb-2">mission_and_values:</h2>
-      <p class="pl-4 border-l-4 border-gray-300">Promowanie innowacji i przedsiębiorczości w przestrzeni społecznej, edukacyjnej i gospodarczej.</p>
-    </section>
-
-    <section id="whatwedo">
-      <h2 class="text-xl text-red-600 font-bold mb-2">what_we_do:</h2>
-      <ul class="list-disc list-inside pl-4 space-y-1 text-gray-700">
-        <li>Edukacja i szkolenia</li>
-        <li>Wsparcie startupów i migrantów</li>
-        <li>Projekty badawcze i wdrożeniowe</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2 class="text-xl text-red-600 font-bold mb-2">active_projects:</h2>
-      <ul class="space-y-2 pl-4">
-        <li><span class="text-blue-600">orbit.defender</span>: System monitoringu satelitów</li>
-        <li><span class="text-blue-600">aist.lab</span>: Laboratorium rozwoju technologii</li>
-      </ul>
-    </section>
-
-    <section id="team">
-      <h2 class="text-xl text-red-600 font-bold mb-2">founders_and_team:</h2>
-      <ul class="space-y-1 pl-4">
-        <li><span class="text-black">Jan Nowak</span>: Prezes</li>
-        <li><span class="text-black">Anna Kowalska</span>: Wiceprezes</li>
-        <li><span class="text-black">Piotr Wiśniewski</span>: Członek Zarządu</li>
-      </ul>
-    </section>
-
-    <section id="documents">
-      <h2 class="text-xl text-red-600 font-bold mb-2">documents:</h2>
-      <p class="pl-4"><a href="#" class="text-blue-600 underline">bylaws.pdf</a>: Statut stowarzyszenia</p>
+      <p class="pl-4 border-l-4 border-gray-300" lang="pl">Promowanie innowacji i przedsiębiorczości w przestrzeni społecznej, edukacyjnej i gospodarczej.</p>
+      <p class="pl-4 border-l-4 border-gray-300 hidden" lang="by">Прасоўванне інавацый і прадпрымальніцтва ў сацыяльнай, адукацыйнай і эканамічнай сферах.</p>
+      <p class="pl-4 border-l-4 border-gray-300 hidden" lang="en">Promoting innovation and entrepreneurship in social, educational, and economic fields.</p>
     </section>
 
     <section id="contact">
       <h2 class="text-xl text-red-600 font-bold mb-2">contact:</h2>
-      <form action="mailto:contact@aist.space" method="POST" enctype="text/plain" class="space-y-4 text-left max-w-md mx-auto">
-        <input type="text" name="name" placeholder="Twoje imię" class="w-full border px-4 py-2 rounded" required>
-        <input type="email" name="email" placeholder="Twój email" class="w-full border px-4 py-2 rounded" required>
-        <textarea name="message" rows="4" placeholder="Wiadomość..." class="w-full border px-4 py-2 rounded" required></textarea>
-        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">Wyślij</button>
-      </form>
+      <p class="pl-4" lang="pl">Napisz do nas: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
+      <p class="pl-4 hidden" lang="by">Напішыце нам: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
+      <p class="pl-4 hidden" lang="en">Write to us: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
     </section>
 
     <section id="support">
@@ -94,5 +64,37 @@
       <p>NIP: 1234567890 | REGON: 123456789</p>
     </section>
   </main>
+
+  <script>
+    const switcher = document.getElementById('lang-switcher');
+    const allLangElements = document.querySelectorAll('[lang]');
+    
+    function setLanguage(lang) {
+      localStorage.setItem('aist-lang', lang);
+      allLangElements.forEach(el => {
+        if (el.getAttribute('lang') === lang) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+    }
+
+    function initLang() {
+      const savedLang = localStorage.getItem('aist-lang');
+      const browserLang = navigator.language.slice(0, 2);
+      const initialLang = savedLang || (['pl', 'by', 'en'].includes(browserLang) ? browserLang : 'pl');
+      setLanguage(initialLang);
+    }
+
+    switcher.addEventListener('click', () => {
+      const current = localStorage.getItem('aist-lang') || 'pl';
+      const next = current === 'pl' ? 'by' : current === 'by' ? 'en' : 'pl';
+      setLanguage(next);
+    });
+
+    initLang();
+  </script>
+
 </body>
 </html>
