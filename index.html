@@ -1,17 +1,92 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIST — Пространство возможностей</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIST — Przestrzeń możliwości</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="container">
-    <h1>AIST</h1>
-    <p class="tagline">Пространство возможностей</p>
-    <p>🌌 Сайт в разработке</p>
-    <p>✉️ Контакт: <a href="mailto:info@aist.space">info@aist.space</a></p>
-  </div>
+<body class="bg-white text-gray-900 font-mono">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <img src="logo-black.png" alt="AIST Logo" class="h-8">
+      <div class="space-x-4 hidden md:block">
+        <a href="#mission" class="hover:text-red-600">Misja</a>
+        <a href="#whatwedo" class="hover:text-red-600">Działania</a>
+        <a href="#projects" class="hover:text-red-600">Projekty</a>
+        <a href="#team" class="hover:text-red-600">Zespół</a>
+        <a href="#contact" class="hover:text-red-600">Kontakt</a>
+        <a href="#documents" class="hover:text-red-600">Dokumenty</a>
+        <a href="#support" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Wesprzyj</a>
+        <span class="ml-6 text-sm text-gray-400">PL | BY | EN</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-24 max-w-4xl mx-auto px-4 space-y-16">
+
+    <section id="hero" class="text-center">
+      <img src="logo-black.png" class="mx-auto h-24 mb-4" alt="AIST logo"/>
+      <h1 class="text-3xl font-bold">AIST. Przestrzeń możliwości</h1>
+      <a href="#support" class="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">Wesprzyj</a>
+    </section>
+
+    <section id="mission">
+      <h2 class="text-xl text-red-600 font-bold mb-2">mission_and_values:</h2>
+      <p class="pl-4 border-l-4 border-gray-300">Promowanie innowacji i przedsiębiorczości w przestrzeni społecznej, edukacyjnej i gospodarczej.</p>
+    </section>
+
+    <section id="whatwedo">
+      <h2 class="text-xl text-red-600 font-bold mb-2">what_we_do:</h2>
+      <ul class="list-disc list-inside pl-4 space-y-1 text-gray-700">
+        <li>Edukacja i szkolenia</li>
+        <li>Wsparcie startupów i migrantów</li>
+        <li>Projekty badawcze i wdrożeniowe</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2 class="text-xl text-red-600 font-bold mb-2">active_projects:</h2>
+      <ul class="space-y-2 pl-4">
+        <li><span class="text-blue-600">orbit.defender</span>: System monitoringu satelitów</li>
+        <li><span class="text-blue-600">aist.lab</span>: Laboratorium rozwoju technologii</li>
+      </ul>
+    </section>
+
+    <section id="team">
+      <h2 class="text-xl text-red-600 font-bold mb-2">founders_and_team:</h2>
+      <ul class="space-y-1 pl-4">
+        <li><span class="text-black">Jan Nowak</span>: Prezes</li>
+        <li><span class="text-black">Anna Kowalska</span>: Wiceprezes</li>
+        <li><span class="text-black">Piotr Wiśniewski</span>: Członek Zarządu</li>
+      </ul>
+    </section>
+
+    <section id="documents">
+      <h2 class="text-xl text-red-600 font-bold mb-2">documents:</h2>
+      <p class="pl-4"><a href="#" class="text-blue-600 underline">bylaws.pdf</a>: Statut stowarzyszenia</p>
+    </section>
+
+    <section id="contact">
+      <h2 class="text-xl text-red-600 font-bold mb-2">contact:</h2>
+      <p class="pl-4">info@aist.space</p>
+    </section>
+
+    <section id="support">
+      <h2 class="text-xl text-red-600 font-bold mb-2">support_button:</h2>
+      <a href="https://buy.stripe.com/test_test" class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">
+        Przekaż darowiznę
+      </a>
+    </section>
+
+    <section id="footer" class="text-sm text-gray-500 border-t pt-6">
+      <h2 class="text-red-600 font-bold mb-2">footer_legal:</h2>
+      <p>NIP: 1234567890 | REGON: 123456789</p>
+    </section>
+  </main>
 </body>
 </html>
