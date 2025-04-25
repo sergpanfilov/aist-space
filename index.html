@@ -8,7 +8,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-900 font-mono">
-
   <!-- Header -->
   <header class="fixed w-full bg-white shadow z-50">
     <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
@@ -25,76 +24,83 @@
       </div>
     </div>
   </header>
-
   <!-- Main Content -->
   <main class="pt-24 max-w-4xl mx-auto px-4 space-y-16">
-
-    <section id="hero" class="text-center">
-      <img src="./logo-black.png" class="mx-auto h-24 mb-4" alt="AIST logo"/>
-      <h1 class="text-3xl font-bold" lang="pl">AIST. Przestrzeń możliwości</h1>
-      <h1 class="text-3xl font-bold hidden" lang="by">AIST. Прастора магчымасцей</h1>
-      <h1 class="text-3xl font-bold hidden" lang="en">AIST. Space of opportunities</h1>
-      <a href="#support" class="mt-6 inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">Wesprzyj</a>
-    </section>
-
-    <section id="mission">
-      <h2 class="text-xl text-red-600 font-bold mb-2">mission_and_values:</h2>
-      <p class="pl-4 border-l-4 border-gray-300" lang="pl">Promowanie innowacji i przedsiębiorczości w przestrzeni społecznej, edukacyjnej i gospodarczej.</p>
-      <p class="pl-4 border-l-4 border-gray-300 hidden" lang="by">Прасоўванне інавацый і прадпрымальніцтва ў сацыяльнай, адукацыйнай і эканамічнай сферах.</p>
-      <p class="pl-4 border-l-4 border-gray-300 hidden" lang="en">Promoting innovation and entrepreneurship in social, educational, and economic fields.</p>
-    </section>
-
-    <section id="contact">
-      <h2 class="text-xl text-red-600 font-bold mb-2">contact:</h2>
-      <p class="pl-4" lang="pl">Napisz do nas: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
-      <p class="pl-4 hidden" lang="by">Напішыце нам: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
-      <p class="pl-4 hidden" lang="en">Write to us: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
-    </section>
-
+    <div id="lang-pl">
+      <section class="text-center">
+        <img src="./logo-black.png" class="mx-auto h-24 mb-4" alt="AIST logo"/>
+        <h1 class="text-3xl font-bold">AIST. Przestrzeń możliwości</h1>
+      </section>
+      <section id="mission">
+        <h2 class="text-xl text-red-600 font-bold mb-2">Misja i wartości:</h2>
+        <p class="pl-4 border-l-4 border-gray-300">Promowanie innowacji i przedsiębiorczości w przestrzeni społecznej, edukacyjnej i gospodarczej.</p>
+      </section>
+      <section id="contact">
+        <h2 class="text-xl text-red-600 font-bold mb-2">Kontakt:</h2>
+        <p class="pl-4">Napisz do nas: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
+      </section>
+    </div>
+    <div id="lang-by" class="hidden">
+      <section class="text-center">
+        <img src="./logo-black.png" class="mx-auto h-24 mb-4" alt="AIST logo"/>
+        <h1 class="text-3xl font-bold">AIST. Прастора магчымасцей</h1>
+      </section>
+      <section id="mission">
+        <h2 class="text-xl text-red-600 font-bold mb-2">Місія і каштоўнасці:</h2>
+        <p class="pl-4 border-l-4 border-gray-300">Прасоўванне інавацый і прадпрымальніцтва ў сацыяльнай, адукацыйнай і эканамічнай сферах.</p>
+      </section>
+      <section id="contact">
+        <h2 class="text-xl text-red-600 font-bold mb-2">Кантакт:</h2>
+        <p class="pl-4">Напішыце нам: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
+      </section>
+    </div>
+    <div id="lang-en" class="hidden">
+      <section class="text-center">
+        <img src="./logo-black.png" class="mx-auto h-24 mb-4" alt="AIST logo"/>
+        <h1 class="text-3xl font-bold">AIST. Space of opportunities</h1>
+      </section>
+      <section id="mission">
+        <h2 class="text-xl text-red-600 font-bold mb-2">Mission and values:</h2>
+        <p class="pl-4 border-l-4 border-gray-300">Promoting innovation and entrepreneurship in social, educational, and economic fields.</p>
+      </section>
+      <section id="contact">
+        <h2 class="text-xl text-red-600 font-bold mb-2">Contact:</h2>
+        <p class="pl-4">Write to us: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
+      </section>
+    </div>
     <section id="support">
-      <h2 class="text-xl text-red-600 font-bold mb-2">support_button:</h2>
+      <h2 class="text-xl text-red-600 font-bold mb-2">Wsparcie:</h2>
       <a href="https://donate.stripe.com/8wMaItdmd90K38A5kk" target="_blank" rel="noopener noreferrer"
          class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">
         Przekaż darowiznę
       </a>
     </section>
-
     <section id="footer" class="text-sm text-gray-500 border-t pt-6">
-      <h2 class="text-red-600 font-bold mb-2">footer_legal:</h2>
+      <h2 class="text-red-600 font-bold mb-2">Dane prawne:</h2>
       <p>NIP: 1234567890 | REGON: 123456789</p>
     </section>
   </main>
-
   <script>
     const switcher = document.getElementById('lang-switcher');
-    const allLangElements = document.querySelectorAll('[lang]');
-    
-    function setLanguage(lang) {
-      localStorage.setItem('aist-lang', lang);
-      allLangElements.forEach(el => {
-        if (el.getAttribute('lang') === lang) {
-          el.classList.remove('hidden');
-        } else {
-          el.classList.add('hidden');
-        }
+    const langs = ['pl', 'by', 'en'];
+    function setLang(lang) {
+      langs.forEach(l => {
+        document.getElementById('lang-' + l).classList.add('hidden');
       });
+      document.getElementById('lang-' + lang).classList.remove('hidden');
+      localStorage.setItem('aist-lang', lang);
     }
-
-    function initLang() {
-      const savedLang = localStorage.getItem('aist-lang');
-      const browserLang = navigator.language.slice(0, 2);
-      const initialLang = savedLang || (['pl', 'by', 'en'].includes(browserLang) ? browserLang : 'pl');
-      setLanguage(initialLang);
-    }
-
     switcher.addEventListener('click', () => {
       const current = localStorage.getItem('aist-lang') || 'pl';
       const next = current === 'pl' ? 'by' : current === 'by' ? 'en' : 'pl';
-      setLanguage(next);
+      setLang(next);
     });
-
-    initLang();
+    window.onload = () => {
+      const saved = localStorage.getItem('aist-lang');
+      const browserLang = navigator.language.slice(0,2);
+      const initial = saved || (langs.includes(browserLang) ? browserLang : 'pl');
+      setLang(initial);
+    };
   </script>
-
 </body>
 </html>
