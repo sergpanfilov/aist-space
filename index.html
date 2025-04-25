@@ -73,12 +73,17 @@
 
     <section id="contact">
       <h2 class="text-xl text-red-600 font-bold mb-2">contact:</h2>
-      <p class="pl-4">info@aist.space</p>
+      <form action="mailto:contact@aist.space" method="POST" enctype="text/plain" class="space-y-4 text-left max-w-md mx-auto">
+        <input type="text" name="name" placeholder="Twoje imię" class="w-full border px-4 py-2 rounded" required>
+        <input type="email" name="email" placeholder="Twój email" class="w-full border px-4 py-2 rounded" required>
+        <textarea name="message" rows="4" placeholder="Wiadomość..." class="w-full border px-4 py-2 rounded" required></textarea>
+        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">Wyślij</button>
+      </form>
     </section>
 
     <section id="support">
       <h2 class="text-xl text-red-600 font-bold mb-2">support_button:</h2>
-      <a href="https://buy.stripe.com/test_test" class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">
+      <a href="https://donate.stripe.com/8wMaItdmd90K38A5kk" class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">
         Przekaż darowiznę
       </a>
     </section>
