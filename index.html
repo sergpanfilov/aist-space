@@ -96,6 +96,11 @@
       setLang(next);
     });
     window.onload = () => {
+  const saved = localStorage.getItem('aist-lang');
+  const browserLang = (navigator.language || navigator.userLanguage || 'pl').slice(0,2);
+  const initial = saved || (['pl', 'by', 'en'].includes(browserLang) ? browserLang : 'pl');
+  setLang(initial);
+};
       const saved = localStorage.getItem('aist-lang');
       const browserLang = navigator.language.slice(0,2);
       const initial = saved || (langs.includes(browserLang) ? browserLang : 'pl');
