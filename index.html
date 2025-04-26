@@ -1,111 +1,85 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIST — Przestrzeń możliwości</title>
-  <link rel="icon" type="image/png" href="./favicon.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white text-gray-900 font-mono">
-  <!-- Header -->
-  <header class="fixed w-full bg-white shadow z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <img src="./logo-black.png" alt="AIST Logo" class="h-8">
-      <div class="space-x-4 hidden md:block">
-        <a href="#mission" class="hover:text-red-600">Misja</a>
-        <a href="#whatwedo" class="hover:text-red-600">Działania</a>
-        <a href="#projects" class="hover:text-red-600">Projekty</a>
-        <a href="#team" class="hover:text-red-600">Zespół</a>
-        <a href="#contact" class="hover:text-red-600">Kontakt</a>
-        <a href="#documents" class="hover:text-red-600">Dokumenty</a>
-        <a href="#support" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Wesprzyj</a>
-        <span class="ml-6 text-sm text-gray-400 cursor-pointer" id="lang-switcher">PL | BY | EN</span>
-      </div>
-    </div>
-  </header>
-  <!-- Main Content -->
-  <main class="pt-24 max-w-4xl mx-auto px-4 space-y-16">
-    <div id="lang-pl">
-      <section class="text-center">
-        <img src="./logo-black.png" class="mx-auto h-24 mb-4" alt="AIST logo"/>
-        <h1 class="text-3xl font-bold">AIST. Przestrzeń możliwości</h1>
-      </section>
-      <section id="mission">
-        <h2 class="text-xl text-red-600 font-bold mb-2">Misja i wartości:</h2>
-        <p class="pl-4 border-l-4 border-gray-300">Promowanie innowacji i przedsiębiorczości w przestrzeni społecznej, edukacyjnej i gospodarczej.</p>
-      </section>
-      <section id="contact">
-        <h2 class="text-xl text-red-600 font-bold mb-2">Kontakt:</h2>
-        <p class="pl-4">Napisz do nas: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
-      </section>
-    </div>
-    <div id="lang-by" class="hidden">
-      <section class="text-center">
-        <img src="./logo-black.png" class="mx-auto h-24 mb-4" alt="AIST logo"/>
-        <h1 class="text-3xl font-bold">AIST. Прастора магчымасцей</h1>
-      </section>
-      <section id="mission">
-        <h2 class="text-xl text-red-600 font-bold mb-2">Місія і каштоўнасці:</h2>
-        <p class="pl-4 border-l-4 border-gray-300">Прасоўванне інавацый і прадпрымальніцтва ў сацыяльнай, адукацыйнай і эканамічнай сферах.</p>
-      </section>
-      <section id="contact">
-        <h2 class="text-xl text-red-600 font-bold mb-2">Кантакт:</h2>
-        <p class="pl-4">Напішыце нам: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
-      </section>
-    </div>
-    <div id="lang-en" class="hidden">
-      <section class="text-center">
-        <img src="./logo-black.png" class="mx-auto h-24 mb-4" alt="AIST logo"/>
-        <h1 class="text-3xl font-bold">AIST. Space of opportunities</h1>
-      </section>
-      <section id="mission">
-        <h2 class="text-xl text-red-600 font-bold mb-2">Mission and values:</h2>
-        <p class="pl-4 border-l-4 border-gray-300">Promoting innovation and entrepreneurship in social, educational, and economic fields.</p>
-      </section>
-      <section id="contact">
-        <h2 class="text-xl text-red-600 font-bold mb-2">Contact:</h2>
-        <p class="pl-4">Write to us: <a href="mailto:contact@aist.space" class="text-blue-600 underline">contact@aist.space</a></p>
-      </section>
-    </div>
-    <section id="support">
-      <h2 class="text-xl text-red-600 font-bold mb-2">Wsparcie:</h2>
-      <a href="https://donate.stripe.com/8wMaItdmd90K38A5kk" target="_blank" rel="noopener noreferrer"
-         class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">
-        Przekaż darowiznę
-      </a>
-    </section>
-    <section id="footer" class="text-sm text-gray-500 border-t pt-6">
-      <h2 class="text-red-600 font-bold mb-2">Dane prawne:</h2>
-      <p>NIP: 1234567890 | REGON: 123456789</p>
-    </section>
-  </main>
-  <script>
-    const switcher = document.getElementById('lang-switcher');
-    const langs = ['pl', 'by', 'en'];
-    function setLang(lang) {
-      langs.forEach(l => {
-        document.getElementById('lang-' + l).classList.add('hidden');
-      });
-      document.getElementById('lang-' + lang).classList.remove('hidden');
-      localStorage.setItem('aist-lang', lang);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | AIST</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #F4F4F4, #E6D8D8);
+      color: #1A1A1A;
+      text-align: center;
     }
-    switcher.addEventListener('click', () => {
-      const current = localStorage.getItem('aist-lang') || 'pl';
-      const next = current === 'pl' ? 'by' : current === 'by' ? 'en' : 'pl';
-      setLang(next);
-    });
-    window.onload = () => {
-  const saved = localStorage.getItem('aist-lang');
-  const browserLang = (navigator.language || navigator.userLanguage || 'pl').slice(0,2);
-  const initial = saved || (['pl', 'by', 'en'].includes(browserLang) ? browserLang : 'pl');
-  setLang(initial);
-};
-      const saved = localStorage.getItem('aist-lang');
-      const browserLang = navigator.language.slice(0,2);
-      const initial = saved || (langs.includes(browserLang) ? browserLang : 'pl');
-      setLang(initial);
-    };
+    h1 {
+      font-size: 3em;
+      margin: 0.2em 0;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.2em;
+      font-weight: 300;
+      margin-bottom: 1em;
+    }
+    .logo {
+      width: 120px;
+      margin-bottom: 1em;
+    }
+    #countdown {
+      font-size: 2em;
+      font-weight: 500;
+      margin-bottom: 2em;
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #AFAFAF;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="assets/images/logo/logo.png" alt="AIST Logo" class="logo">
+
+  <h1>We are almost ready</h1>
+  <p>Something meaningful is on its way. Stay tuned!</p>
+
+  <div id="countdown"></div>
+
+  <footer>
+    &copy; 2025 AIST.space | All rights reserved
+  </footer>
+
+  <script>
+    const launchDate = new Date("May 01, 2025 00:00:00").getTime();
+    const countdown = document.getElementById('countdown');
+
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        countdown.innerHTML = "We are live!";
+      }
+    }, 1000);
   </script>
+
 </body>
 </html>
