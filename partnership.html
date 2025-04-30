@@ -325,7 +325,19 @@
         <script type='text/javascript' src='assets/lib/cubeportfolio/js/jquery.cubeportfolio.min.js'></script>
         <script type='text/javascript' src='assets/lib/swiper/js/swiper.min.js'></script>        
 
-        <script type='text/javascript' src='assets/js/main.js'></script>       
+        <script type='text/javascript' src='assets/js/main.js'></script>      
+        
+        <script>
+            $(document).ready(function() {
+              $('#top-menu a').on('click', function(e) {
+                const href = $(this).attr('href');
+                if (href && href !== '#') {
+                  window.location.href = href;
+                }
+              });
+            });
+          </script>
+          
         <!--  Scripts Ends -->
     </body>
 </html>
