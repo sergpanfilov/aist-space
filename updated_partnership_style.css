@@ -33,3 +33,31 @@
     max-width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .content-box-wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .content-box h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .content-box p {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .figure img {
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+}
