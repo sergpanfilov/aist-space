@@ -43,17 +43,14 @@
 /* 🌐 Мобильная версия */
 @media (max-width: 768px) {
   .partners-logos {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .partners-logos a {
     flex: 0 0 100%;
     max-width: 100%;
-    scroll-snap-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     border-radius: 0;
     box-shadow: none;
     background: transparent;
@@ -61,7 +58,8 @@
 
   .partners-logos img {
     width: 90%;
-    max-width: 300px;
+    max-width: 320px;
     height: auto;
+    margin: 0 auto;
   }
 }
