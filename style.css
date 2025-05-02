@@ -4673,4 +4673,35 @@ Portfolio Listing
   pointer-events: none;
   transition: none;
 }
+.accordion-rodo {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.accordion-toggle {
+  background-color: #f4f4f4;
+  color: #333;
+  cursor: pointer;
+  padding: 14px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-toggle:hover {
+  background-color: #e0e0e0;
+}
+
+.accordion-content {
+  display: none;
+  padding: 0 20px 20px;
+  border: 1px solid #ddd;
+  border-top: none;
+  background-color: #fafafa;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 /*# sourceMappingURL=style.css.map */

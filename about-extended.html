@@ -180,83 +180,20 @@
 
                                     <div class="container m-t-90">
                                         <div class="row">                                    
-                                            <div class="col-sm-12"> 
-                                                <div class="heading-block m-b-10">
-                                                    <h1 class="block-size-4">
-                                                        About Me
-                                                    </h1>
-                                                </div>
-                                                <div class="text-block m-b-45">
-                                                    <p class="medium">
-                                                        I’m a Product designer currently working as freelancer. I’m from Iceland but my work is essentially in Sydney. Specialized in graphic, webdesign and interface design.
-                                                        I’ve been working as a designer for six years. I’ve Completed my education from most popular universities. Learning is the essential part of my life.
-                                                        I take on freelance projects that pique my interest. Outside of my work, I enjoy good food and the outdoors games with friends and relatives. I also spend my spare time in libraries.
-                                                    </p>
-                                                </div>
-
-                                                <div class="row">                                    
-                                                    <div class="col-md-3 m-b-25">
-                                                        <div class="icon-box">
-                                                            <img src="assets/images/other/Branding-50x50.png" class="figure-img img-fluid" alt="Branding">
-                                                            <h4>Branding</h4>                                                                     
-                                                        </div>
+                                            <div class="col-sm-12">
+                                                <div class="accordion-rodo">
+                                                    <button class="accordion-toggle">Polityka prywatności i przetwarzania danych (RODO)</button>
+                                                    <div class="accordion-content">
+                                                      <p>
+                                                        Zgodnie z rozporządzeniem Parlamentu Europejskiego i Rady UE 2016/679 (RODO) informujemy, że Twoje dane osobowe...
+                                                        <!-- Здесь вставляется полный текст RODO -->
+                                                      </p>
                                                     </div>
-                                                    <div class="col-md-3 m-b-25">
-                                                        <div class="icon-box">
-                                                            <img src="assets/images/other/pencil.png" class="figure-img img-fluid" alt="Branding">
-                                                            <h4>Caligraphy</h4>                                                                     
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3 m-b-25">
-                                                        <div class="icon-box">
-                                                            <img src="assets/images/other/graphic.png" class="figure-img img-fluid" alt="Branding">
-                                                            <h4>Graphics</h4>                                                                     
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3 m-b-25">
-                                                        <div class="icon-box">
-                                                            <img src="assets/images/other/social.png" class="figure-img img-fluid" alt="Branding">
-                                                            <h4>Social Media</h4>                                                                     
-                                                        </div>
-                                                    </div>
-                                                </div>    
-
-                                                <div class="row m-t-65 m-b-15">                                    
-                                                    <div class="col-sm-12">
-                                                        <div class="heading-block text-left">
-                                                            <h1 class="block-size-4">
-                                                                Education / Experiences
-                                                            </h1>
-                                                        </div>
-                                                    </div>
-                                                </div>    
-
-                                                <div class="row">                                    
-                                                    <div class="col-md-6 m-b-40">
-                                                        <div class="desc-list-container has-border">
-                                                            <div class="desc-list">
-                                                                <h6>2015 - 2016</h6>
-                                                                <p>I am a graduate of the design at the Newyork University.</p>
-                                                            </div>
-                                                            <div class="desc-list">
-                                                                <h6>2014 - 2015</h6>
-                                                                <p>I am a computer graduate at the California State University.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>          
-                                                    <div class="col-md-6 m-b-20">
-                                                        <div class="desc-list-container has-border">
-                                                            <div class="desc-list">
-                                                                <h6>2017 - 2018</h6>
-                                                                <p>I enjoyed working with zentech technology as creative director.</p>
-                                                            </div>
-                                                            <div class="desc-list">
-                                                                <h6>2016 - 2017</h6>
-                                                                <p>I enjoyed working at converse studio as a product designer.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>       
-                                                </div>    
+                                                  </div>
+                                                  
+                                            </div> 
+                                        </div> 
+                                    
 
                                                 <div class="row m-t-50 m-b-100">                                    
                                                     <div class="col-sm-12">
@@ -318,5 +255,15 @@
 
         <script type='text/javascript' src='assets/js/main.js'></script>       
         <!--  Scripts Ends -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const toggle = document.querySelector(".accordion-toggle");
+              const content = document.querySelector(".accordion-content");
+          
+              toggle.addEventListener("click", function () {
+                content.style.display = content.style.display === "block" ? "none" : "block";
+              });
+            });
+          </script>
     </body>
 </html>
