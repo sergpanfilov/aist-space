@@ -43,23 +43,30 @@
 /* 🌐 Мобильная версия */
 @media (max-width: 768px) {
   .partners-logos {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px;
   }
 
   .partners-logos a {
-    flex: 0 0 100%;
+    display: block;
+    width: 100%;
     max-width: 100%;
-    padding: 10px 0;
-    border-radius: 0;
-    box-shadow: none;
-    background: transparent;
+    text-align: center;
+    padding: 8px 0;
   }
 
   .partners-logos img {
-    width: 90%;
-    max-width: 320px;
+    width: 100%;
     height: auto;
-    margin: 0 auto;
+    max-width: 100%;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    padding: 6px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #fff;
   }
 }
