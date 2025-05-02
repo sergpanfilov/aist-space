@@ -46,7 +46,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 6px; /* Уменьшено в 2 раза */
     padding: 0 10px;
   }
 
@@ -55,7 +55,7 @@
     width: 100%;
     max-width: 100%;
     text-align: center;
-    padding: 8px 0;
+    padding: 4px 0;
   }
 
   .partners-logos img {
@@ -63,10 +63,9 @@
     height: auto;
     max-width: 100%;
     object-fit: contain;
-    border: 1px solid #ccc;
-    padding: 6px;
     box-sizing: border-box;
-    border-radius: 4px;
-    background: #fff;
+    border: none;           /* Убираем рамку */
+    background: none;       /* Убираем фон */
+    padding: 0;
   }
 }
