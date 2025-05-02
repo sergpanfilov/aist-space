@@ -1,8 +1,10 @@
+/* 🔧 Общий блок партнёров */
 .partners-section {
   padding: 60px 0;
-  background-color: #f4f4f4;
+  background-color: transparent; /* нейтральный фон */
 }
 
+/* 🏷️ Заголовок блока */
 .partners-title {
   text-align: center;
   font-size: 24px;
@@ -10,6 +12,7 @@
   margin-bottom: 30px;
 }
 
+/* 📦 Контейнер логотипов */
 .partners-logos {
   display: flex;
   flex-wrap: wrap;
@@ -17,6 +20,7 @@
   gap: 20px;
 }
 
+/* 🔗 Обёртка каждого логотипа */
 .partners-logos a {
   display: flex;
   justify-content: center;
@@ -24,48 +28,47 @@
   flex: 1 1 calc(25% - 20px);
   max-width: calc(25% - 20px);
   padding: 10px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
+/* 🔁 Наведение */
 .partners-logos a:hover {
   transform: scale(1.05);
 }
 
+/* 🖼️ Сам логотип */
 .partners-logos img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  border: none;
+  background: none;
+  padding: 0;
 }
 
-/* 🌐 Мобильная версия */
+/* 📱 Мобильная версия */
 @media (max-width: 768px) {
   .partners-logos {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px; /* Уменьшено в 2 раза */
+    gap: 10px;
     padding: 0 10px;
   }
 
   .partners-logos a {
-    display: block;
+    flex: none;
     width: 100%;
     max-width: 100%;
-    text-align: center;
-    padding: 4px 0;
+    padding: 8px 0;
   }
 
   .partners-logos img {
     width: 100%;
-    height: auto;
     max-width: 100%;
-    object-fit: contain;
-    box-sizing: border-box;
-    border: none;           /* Убираем рамку */
-    background: none;       /* Убираем фон */
-    padding: 0;
+    height: auto;
   }
 }
