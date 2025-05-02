@@ -4673,28 +4673,4 @@ Portfolio Listing
   pointer-events: none;
   transition: none;
 }
-
-.partners-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin: 40px auto;
-  padding: 0 10px;
-}
-
-.partners-logos a {
-  flex: 1 1 120px; /* Позволяет гибко адаптироваться */
-  max-width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.partners-logos img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
 /*# sourceMappingURL=style.css.map */
