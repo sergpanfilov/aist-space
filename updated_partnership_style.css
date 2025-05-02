@@ -1,63 +1,67 @@
+.partners-section {
+  padding: 60px 0;
+  background-color: #f4f4f4;
+}
 
-/* === Logo Styling for Partnership Page === */
+.partners-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
 .partners-logos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .partners-logos a {
-  display: inline-block;
-  max-width: 90px;
-  max-height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.partners-logos a:hover {
+  transform: scale(1.05);
 }
 
 .partners-logos img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
-  display: block;
-  margin: 0 auto;
 }
 
-/* Mobile Optimization */
+/* 🌐 Мобильная версия */
 @media (max-width: 768px) {
+  .partners-logos {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0;
+  }
+
   .partners-logos a {
-    max-width: 90%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    scroll-snap-align: center;
+    padding: 20px 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
   }
 
   .partners-logos img {
-    max-width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .col-md-4 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .content-box-wrap {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .content-box h3 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .content-box p {
-    font-size: 15px;
-    text-align: justify;
-  }
-
-  .figure img {
-    width: 80%;
-    max-width: 200px;
-    margin: 0 auto;
-    display: block;
+    width: 90%;
+    max-width: 300px;
+    height: auto;
   }
 }
