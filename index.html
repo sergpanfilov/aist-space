@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-  <!-- Название страницы -->
-  <title>AIST — przekierowanie / redirect</title>
-
-  <!-- Базовые мета-теги -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" /> <!-- Не индексировать -->
-
-  <!-- Мгновенное редирект через мета-тег (работает без JS) -->
+  <meta name="robots" content="noindex, nofollow" />
   <meta http-equiv="refresh" content="0; url=/pl/" />
 
-  <!-- Каноническая ссылка и языковые альтернативы -->
   <link rel="canonical" href="https://aist.space/pl/" />
   <link rel="alternate" hreflang="pl" href="https://aist.space/pl/" />
   <link rel="alternate" hreflang="ru" href="https://aist.space/ru/" />
@@ -20,10 +13,21 @@
   <!-- Иконки -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-</head>
 
+  <script>
+    (function() {
+      const lang = (navigator.language || navigator.userLanguage || 'pl').toLowerCase();
+      if (lang.startsWith('ru') || lang.startsWith('be')) {
+        window.location.replace('/ru/');
+      } else {
+        window.location.replace('/pl/');
+      }
+    })();
+  </script>
+</head>
 <body>
-  <!-- Фолбэк на случай отключённого редиректа -->
-  <p>Przekierowanie... Jeśli nie nastąpiło automatycznie, <a href="/pl/">kliknij tutaj</a>.</p>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/pl/" />
+  </noscript>
 </body>
 </html>
