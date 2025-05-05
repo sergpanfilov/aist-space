@@ -1,72 +1,83 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
-        <!-- Document Title -->      
+        <!-- Заголовок вкладки браузера -->
         <title>AIST — Przedsiębiorczość migracyjna w Polsce</title>
-
-        <!-- Metas -->      
-        <meta charset="UTF-8">
-        <meta name="description" content="Wspieramy mikroprzedsiębiorców w migracji. Bez patosu, bez filtrów, z praktyką. AIST to głos tych, których zwykle nie słychać." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="language" content="pl">
-        <meta http-equiv="Content-Language" content="pl">
-
+    
+        <!-- Базовые мета-теги -->
+        <meta charset="UTF-8"> <!-- Кодировка -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивность под мобильные устройства -->
+        <meta name="description" content="Wspieramy mikroprzedsiębiorców w migracji. Bez patosu, bez filtrów, z praktyką. AIST to głos tych, których zwykle nie słychać."> <!-- Описание страницы для поисковиков и соцсетей -->
+        <meta name="keywords" content="AIST, migracja, mikroprzedsiębiorcy, NGO, Białorusini, przedsiębiorczość, integracja, Polska"> <!-- Ключевые слова -->
+        <meta name="language" content="pl"> <!-- Язык страницы -->
+        <meta http-equiv="Content-Language" content="pl"> <!-- Альтернативный способ указать язык -->
+    
+        <!-- Twitter Cards (для красивого отображения при репостах в Twitter/X) -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="AIST — Przedsiębiorczość migracyjna w Polsce">
         <meta name="twitter:description" content="Wspieramy mikroprzedsiębiorców w migracji. Bez patosu, bez filtrów, z praktyką.">
         <meta name="twitter:image" content="https://aist.space/assets/images/og-image.jpg">
-
-        <meta property="og:title" content="AIST — Przedsiębiorczość migracyjna w Polsce" />
-        <meta property="og:description" content="Wspieramy mikroprzedsiębiorców w migracji. Bez patosu, bez filtrów. AIST to głos tych, których zwykle nie słychać." />
-        <meta property="og:image" content="https://aist.space/assets/images/og-image.jpg" />
-        <meta property="og:url" content="https://aist.space/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="pl_PL" />
-
-        <!-- Favicon -->      
+    
+        <!-- Open Graph (для репостов в Facebook и мессенджерах) -->
+        <meta property="og:title" content="AIST — Przedsiębiorczość migracyjna w Polsce">
+        <meta property="og:description" content="Wspieramy mikroprzedsiębiorców w migracji. Bez patosu, bez filtrów. AIST to głos tych, których zwykle nie słychać.">
+        <meta property="og:image" content="https://aist.space/assets/images/og-image.jpg">
+        <meta property="og:url" content="https://aist.space/">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="pl_PL">
+        <meta property="og:site_name" content="AIST">
+    
+        <!-- Иконки для вкладок и мобильных устройств -->
         <link rel="icon" href="assets/images/favicon.png" type="image/png">
-        <link rel="apple-touch-icon" href="assets/images/favicon.png">
-
-        <!-- Links -->      
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
-        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
-        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' />      
-        <link rel='stylesheet' id='multiscroll-css'  href='assets/lib/multi-scroll/css/jquery.multiscroll.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
-        <link rel="canonical" href="https://aist.space/">
-
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+    
+        <!-- Стили и шрифты -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" id="bootstrap-css" href="assets/lib/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="font-awesome-css" href="assets/css/icons/font-awesome.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="swiper-css" href="assets/lib/swiper/css/swiper.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="cubeportfolio-css" href="assets/lib/cubeportfolio/css/cubeportfolio.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="multiscroll-css" href="assets/lib/multi-scroll/css/jquery.multiscroll.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="main-css" href="style.css" type="text/css" media="all">
+    
+        <!-- SEO: канонический URL + языковые альтернативы -->
+        <link rel="canonical" href="https://aist.space/pl/">
+        <link rel="alternate" hreflang="pl" href="https://aist.space/">
+        <link rel="alternate" hreflang="ru" href="https://aist.space/ru/">
+    
+        <!-- Schema.org — структурированные данные (для Google и др.) -->
         <script type="application/ld+json">
             {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Stowarszyszenie AIST",
-              "url": "https://aist.space",
-              "logo": "https://aist.space/assets/images/logo/logo-black.png",
-              "description": "Stowarzyszenie wspierające mikroprzedsiębiorców migracyjnych w Polsce.",
-              "foundingDate": "2022",
-              "founders": [
-                {
-                  "@type": "Person",
-                  "name": "Zespół AIST"
-                }
-              ],
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "PL",
-                "postalCode": "01-473",
-                "streetAddress": "ul. Henryka Dobrzańskiego Hubala 22D",
-                "addressLocality": "Warszawa"
-              },
-              "sameAs": [
-                "https://www.facebook.com/aist.space",
-                "https://www.linkedin.com/company/aist-space/"
-              ]
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Stowarszyszenie AIST",
+                "inLanguage": "pl",
+                "url": "https://aist.space",
+                "mainEntityOfPage": "https://aist.space/",
+                "logo": "https://aist.space/assets/images/logo/logo-black.png",
+                "description": "Stowarzyszenie wspierające mikroprzedsiębiorców migracyjnych w Polsce.",
+                "foundingDate": "2022",
+                "founders": [
+                    {
+                        "@type": "Person",
+                        "name": "Zespół AIST"
+                    }
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "PL",
+                    "postalCode": "01-473",
+                    "streetAddress": "ul. Henryka Dobrzańskiego Hubala 22D",
+                    "addressLocality": "Warszawa"
+                },
+                "sameAs": [
+                    "https://www.facebook.com/aist.space",
+                    "https://www.linkedin.com/company/aist-space/"
+                ]
             }
-            </script>
-
+        </script>
     </head>
+    
     <body>
 
         <!-- Page Wrapper -->

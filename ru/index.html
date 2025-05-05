@@ -1,75 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <!-- Document Title -->      
-        <title>AIST — малый бизнес иммигрантов в Польше</title>
-
-        <!-- Metas -->      
-        <meta charset="UTF-8">
-        <meta name="description" content="Поддерживаем микропредпринимателей в иммиграции. Без пафоса, без фильтров, на практике. AIST — это голос тех, кого обычно не слышно." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="language" content="ru">
-        <meta http-equiv="Content-Language" content="ru">
-
+        <!-- Заголовок вкладки браузера -->
+        <title>AIST — Малый бизнес иммигрантов в Польше</title>
+    
+        <!-- Базовые мета-теги -->
+        <meta charset="UTF-8"> <!-- Кодировка -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивность под устройства -->
+        <meta name="description" content="Мы поддерживаем микропредпринимателей в иммиграции. Без пафоса, без фильтров, на практике. AIST — голос тех, кого обычно не слышно."> <!-- Краткое описание -->
+        <meta name="keywords" content="AIST, миграция, самозанятые, микробизнес, иммигранты, Беларусь, НГО, Польша, интеграция, предпринимательство"> <!-- SEO-ключевые слова -->
+        <meta name="language" content="ru"> <!-- Язык страницы -->
+        <meta http-equiv="Content-Language" content="ru"> <!-- Резервная настройка языка -->
+    
+        <!-- Twitter Cards (репосты в Twitter/X) -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="AIST — малый бизнес иммигрантов в Польше">
-        <meta name="twitter:description" content="Поддерживаем предпринимательство в иммиграции. Без пафоса, без фильтров, на практике.">
+        <meta name="twitter:title" content="AIST — Малый бизнес иммигрантов в Польше">
+        <meta name="twitter:description" content="Поддерживаем микропредпринимателей в иммиграции. Без пафоса, без фильтров, на практике.">
         <meta name="twitter:image" content="https://aist.space/assets/images/og-image.jpg">
-
-        <meta property="og:title" content="AIST — малый бизнес иммигрантов в Польше" />
-        <meta property="og:description" content="Поддерживаем предпринимательство в иммиграции. Без пафоса, без фильтров, на практике." />
-        <meta property="og:image" content="https://aist.space/assets/images/og-image.jpg" />
-        <meta property="og:url" content="https://aist.space/ru/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="ru_RU" />
-
-        <!-- Favicon -->      
+    
+        <!-- Open Graph (соцсети и мессенджеры) -->
+        <meta property="og:title" content="AIST — Малый бизнес иммигрантов в Польше">
+        <meta property="og:description" content="Поддерживаем микропредпринимателей в иммиграции. Без пафоса, без фильтров. AIST — голос тех, кого обычно не слышно.">
+        <meta property="og:image" content="https://aist.space/assets/images/og-image.jpg">
+        <meta property="og:url" content="https://aist.space/ru/">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="ru_RU">
+        <meta property="og:site_name" content="AIST">
+    
+        <!-- Иконки -->
         <link rel="icon" href="assets/images/favicon.png" type="image/png">
-        <link rel="apple-touch-icon" href="assets/images/favicon.png">
-
-        <!-- Links -->      
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
-        <link rel='stylesheet' id='bootstrap-css'  href='assets/lib/bootstrap/css/bootstrap.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' id='font-awesome-css'  href='assets/css/icons/font-awesome.min.css' type='text/css' media='all' />       
-        <link rel='stylesheet' id='swiper-css' href='assets/lib/swiper/css/swiper.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' id='cubeportfolio-css'  href='assets/lib/cubeportfolio/css/cubeportfolio.min.css' type='text/css' media='all' />      
-        <link rel='stylesheet' id='multiscroll-css'  href='assets/lib/multi-scroll/css/jquery.multiscroll.min.css' type='text/css' media='all' />
-        <link rel='stylesheet' id='main-css'  href='style.css' type='text/css' media='all' />
-        <link rel="canonical" href="https://aist.space/ru/">
         <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
-        <link rel="alternate" hreflang="pl" href="https://aist.space/pl/" />
-        <link rel="alternate" hreflang="ru" href="https://aist.space/ru/" />
-
+    
+        <!-- Стили -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" id="bootstrap-css" href="assets/lib/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="font-awesome-css" href="assets/css/icons/font-awesome.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="swiper-css" href="assets/lib/swiper/css/swiper.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="cubeportfolio-css" href="assets/lib/cubeportfolio/css/cubeportfolio.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="multiscroll-css" href="assets/lib/multi-scroll/css/jquery.multiscroll.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="main-css" href="style.css" type="text/css" media="all">
+    
+        <!-- SEO: канонический адрес и языковые альтернативы -->
+        <link rel="canonical" href="https://aist.space/ru/">
+        <link rel="alternate" hreflang="ru" href="https://aist.space/ru/">
+        <link rel="alternate" hreflang="pl" href="https://aist.space/">
+    
+        <!-- Структурированные данные для поисковиков -->
         <script type="application/ld+json">
             {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Stowarzyszenie AIST",
-              "url": "https://aist.space",
-              "logo": "https://aist.space/assets/images/logo/logo-black.png",
-              "description": "Ассоциация поддержки самозанятых и малого бизнеса в Польше",
-              "foundingDate": "2022",
-              "founders": [
-                {
-                  "@type": "Person",
-                  "name": "Правление AIST"
-                }
-              ],
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "PL",
-                "postalCode": "01-473",
-                "streetAddress": "ul. Henryka Dobrzańskiego Hubala 22D",
-                "addressLocality": "Warszawa"
-              },
-              "sameAs": [
-                "https://www.facebook.com/aist.space",
-                "https://www.linkedin.com/company/aist-space/"
-              ]
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Ассоциация AIST",
+                "inLanguage": "ru",
+                "url": "https://aist.space",
+                "mainEntityOfPage": "https://aist.space/ru/",
+                "logo": "https://aist.space/assets/images/logo/logo-black.png",
+                "description": "Ассоциация поддержки самозанятых и малого бизнеса иммигрантов в Польше",
+                "foundingDate": "2022",
+                "founders": [
+                    {
+                        "@type": "Person",
+                        "name": "Команда AIST"
+                    }
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "PL",
+                    "postalCode": "01-473",
+                    "streetAddress": "ul. Henryka Dobrzańskiego Hubala 22D",
+                    "addressLocality": "Warszawa"
+                },
+                "sameAs": [
+                    "https://www.facebook.com/aist.space",
+                    "https://www.linkedin.com/company/aist-space/"
+                ]
             }
-            </script>
-
+        </script>
     </head>
+    
     <body>
 
         <!-- Page Wrapper -->
