@@ -1,0 +1,29 @@
+{
+    "name": "AIST — Przedsiębiorczość migracyjna",
+    "short_name": "AIST",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#D0021B",
+    "orientation": "portrait",
+    "lang": "pl",
+    "scope": "/",
+    "icons": [
+      {
+        "src": "/assets/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/images/favicon.png",
+        "sizes": "180x180",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+  }  
