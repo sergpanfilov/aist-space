@@ -1,6 +1,35 @@
-# Разрешаем всем ботам доступ ко всем страницам
-User-agent: *
-Allow: /
+# robots.txt dla AIST.space — wersja rozszerzona
 
-# Указываем местоположение карты сайта
+User-agent: *
+# Запрещаем обход технических и сторонних библиотек
+Disallow: /assets/lib/
+Disallow: /assets/js/vendor/
+Disallow: /assets/css/icons/
+Disallow: /assets/images/drafts/
+Disallow: /drafts/
+Disallow: /admin/
+
+# Запрещаем индексацию определённых форматов файлов
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.pdf$
+Disallow: /*.psd$
+Disallow: /*.ai$
+
+# Разрешаем всё остальное, включая языковые версии
+Allow: /pl/
+Allow: /ru/
+Allow: /assets/images/
+Allow: /assets/fonts/
+Allow: /style.css
+
+# Указываем sitemap.xml
 Sitemap: https://aist.space/sitemap.xml
+
+# Контакт для поисковых систем (необязательно, но может повысить доверие)
+# (замени при желании на реальный адрес или удалите)
+# Contact: contact@aist.space
+
+# Советы:
+# - Не закрываем CSS и JS: это важно для рендеринга в Google
+# - Можно создать отдельный robots.txt для поддоменов, если они появятся
