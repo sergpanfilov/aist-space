@@ -26,9 +26,7 @@ Allow: /style.css
 # Указываем sitemap.xml
 Sitemap: https://aist.space/sitemap.xml
 
-# Контакт для поисковых систем (необязательно, но может повысить доверие)
-# (замени при желании на реальный адрес или удалите)
-# Contact: contact@aist.space
+Contact: contact@aist.space
 
 # Советы:
 # - Не закрываем CSS и JS: это важно для рендеринга в Google

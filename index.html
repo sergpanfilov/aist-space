@@ -1,44 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-  <!-- Технический заголовок, чтобы не ругались парсеры -->
-  <title>AIST — wybór języka / language redirect</title>
+  <!-- Название страницы -->
+  <title>AIST — przekierowanie / redirect</title>
 
   <!-- Базовые мета-теги -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="noindex, nofollow" /> <!-- Не индексировать -->
+
+  <!-- Мгновенное редирект через мета-тег (работает без JS) -->
   <meta http-equiv="refresh" content="0; url=/pl/" />
 
-  <!-- Canonical и hreflang — чтобы поисковики знали, что контент не тут -->
+  <!-- Каноническая ссылка и языковые альтернативы -->
   <link rel="canonical" href="https://aist.space/pl/" />
   <link rel="alternate" hreflang="pl" href="https://aist.space/pl/" />
   <link rel="alternate" hreflang="ru" href="https://aist.space/ru/" />
 
-  <!-- Иконки для вкладок и мобильных устройств -->
+  <!-- Иконки -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <!-- JS-перенаправление на основе языка -->
-  <script>
-    (function() {
-      const lang = navigator.language || navigator.userLanguage || 'pl';
-      const lowerLang = lang.toLowerCase();
-
-      // Если язык — русский, белорусский или их варианты
-      if (lowerLang.startsWith('ru') || lowerLang.startsWith('be')) {
-        window.location.replace('/ru/');
-      } else {
-        window.location.replace('/pl/');
-      }
-    })();
-  </script>
 </head>
+
 <body>
-  <!-- Фолбэк на случай отключенного JS -->
-  <noscript>
-    <meta http-equiv="refresh" content="0; url=/pl/" />
-    <p>Przekierowanie / Redirecting... Jeśli nie nastąpiło, <a href="/pl/">kliknij tutaj</a>.</p>
-  </noscript>
+  <!-- Фолбэк на случай отключённого редиректа -->
+  <p>Przekierowanie... Jeśli nie nastąpiło automatycznie, <a href="/pl/">kliknij tutaj</a>.</p>
 </body>
 </html>
