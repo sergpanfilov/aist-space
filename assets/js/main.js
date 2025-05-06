@@ -636,21 +636,17 @@ var KRAFT = KRAFT || {};
                     zoomControl: false
                 };
 
-                var map = new google.maps.Map(google_map, map_options);
+                var map = new google.maps.Map( google_map, map_options );
 
-                const markerElement = document.createElement('div');
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng( latitude, longitude ),
+                    map: map,            
+                    icon: map_marker_img
+                });        
 
-                if (map_marker_img) {
-                markerElement.innerHTML = `<img src="${map_marker_img}" style="width:32px;height:32px;">`;
-                }
-
-                const marker = new google.maps.AdvancedMarkerElement({
-                position: new google.maps.LatLng(latitude, longitude),
-                map: map,
-                content: markerElement
-                });
-
-                map.setOptions({ styles: JSON.parse(map_style.toString()) });
+                map.setOptions( { styles: JSON.parse( map_style.toString() ) } );
+                
+            },
             
             initializeContactForm: function() {     
                 
