@@ -293,6 +293,13 @@
               });
             });
           </script>
+          <script>
+            function initMap() {
+              if (typeof KRAFT !== 'undefined' && typeof KRAFT.widget !== 'undefined') {
+                KRAFT.widget.init();
+              }
+            }
+          </script>
         <!--  Scripts Ends -->
     </body>
 </html>
