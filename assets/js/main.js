@@ -175,7 +175,7 @@ var KRAFT = KRAFT || {};
                             nav.classList.remove('display-menu');
                         }
                     });
-                }
+                },
                 
                 customPageScroll: function() {
                     const scrollLinks = document.querySelectorAll('.custom-scroll, .custom-scroll a');
