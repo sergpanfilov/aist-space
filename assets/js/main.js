@@ -145,86 +145,73 @@ var KRAFT = KRAFT || {};
                     
                 },               
 
-                onePageScroll: function() {           
-                    
-                    
-                    $( navigationEl ).find( 'ul' ).on( 'click', function( e ) {                       
-                 
-                         if ( $( e.target ).is( 'a' ) &&  $( e.target ).attr( 'href' ).indexOf( '#' ) != -1 ) {  
-                                             
-                            var element = $( navigationEl ),
-                                divAnchor = $( e.target ).attr('href'),
-                                divScrollToAnchor = divAnchor.substring( divAnchor.indexOf( '#' ) + 1 ),
-                                divScrollSpeed = element.attr('data-speed'),                               
-                                divScrollEasing = element.attr('data-easing');   
-                                
-                            if( !divScrollSpeed ) { divScrollSpeed = 1250; }
-                            if( !divScrollEasing ) { divScrollEasing = 'easeInOutExpo'; }
-                            
-                             if( divScrollToAnchor != '' ) {
-                                
-                                 element.find( 'li' ).removeClass( 'current' );
-                                 element.find( 'a[href$="' + divScrollToAnchor + '"]' ).parent( 'li' ).addClass( 'current' );
-
-                                 $( 'html,body' ).stop( true ).animate({
-                                    'scrollTop': $( '#' + divScrollToAnchor ).offset().top
-                                 }, Number( divScrollSpeed ), divScrollEasing );
-                                 
-                                 if( windowWidth < 991  ) {
-
-                                    hamburger_trigger.toggleClass( 'open', false );
-                                    navigationEl.toggleClass( 'display-menu', false );
-
-                                }
-                            }
-                            
-                            return false;
-                            
+                onePageScroll: function() {
+                    const nav = document.querySelector(navigationEl);
+                    if (!nav) return;
+                
+                    nav.querySelector('ul').addEventListener('click', function(e) {
+                        const link = e.target.closest('a[href*="#"]');
+                        if (!link) return;
+                
+                        e.preventDefault();
+                
+                        const targetId = link.getAttribute('href').split('#')[1];
+                        const target = document.getElementById(targetId);
+                        if (!target) return;
+                
+                        // Удаление класса 'current' у всех <li>
+                        nav.querySelectorAll('li').forEach(li => li.classList.remove('current'));
+                
+                        // Добавление 'current' к активному пункту
+                        const parentLi = link.closest('li');
+                        if (parentLi) parentLi.classList.add('current');
+                
+                        // Плавный скролл
+                        target.scrollIntoView({ behavior: 'smooth' });
+                
+                        // Закрыть мобильное меню при ширине < 991px
+                        if (window.innerWidth < 991) {
+                            document.querySelector('.ham-trigger')?.classList.remove('open');
+                            nav.classList.remove('display-menu');
                         }
-                        
-                    });                    
-                    
-                },
+                    });
+                }
+                
                 
                 customPageScroll: function() {
-                    
-                    
-                    $( '.custom-scroll, .custom-scroll a' ).on( 'click', function() {                     
-                                                      
-                            var divScrollToAnchor = $( this ).attr('href'),
-                                divScrollSpeed = $( this ).attr('data-speed'),                                
-                                divScrollEasing = $( this ).attr('data-easing');   
-
-                            if( !divScrollSpeed ) { divScrollSpeed = 1250; }
-                            if( !divScrollEasing ) { divScrollEasing = 'easeInOutExpo'; }
-
-                            if( $( divScrollToAnchor ).length > 0 ) {                              
-
-                                 $( 'html,body' ).stop( true ).animate({
-                                     'scrollTop': $( divScrollToAnchor ).offset().top
-                                 }, Number( divScrollSpeed ), divScrollEasing );
-                            }                          
-
-                            return false;                       
-                    });                    
-                    
+                    const scrollLinks = document.querySelectorAll('.custom-scroll, .custom-scroll a');
+                
+                    scrollLinks.forEach(link => {
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const targetSelector = this.getAttribute('href');
+                            if (!targetSelector || !targetSelector.startsWith('#')) return;
+                
+                            const targetElement = document.querySelector(targetSelector);
+                            if (!targetElement) return;
+                
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        });
+                    });
                 },
                 
                 goToTop: function() {
-                    
-			var elementScrollSpeed = goToTopBtn.attr('data-speed'),
-			    elementScrollEasing = goToTopBtn.attr('data-easing');
-
-			if( !elementScrollSpeed ) { elementScrollSpeed = 700; }
-			if( !elementScrollEasing ) { elementScrollEasing = 'easeOutQuad'; }
-
-			goToTopBtn.on( 'click', function() {
-				$('body,html').stop(true).animate({
-					'scrollTop': 0
-				}, Number( elementScrollSpeed ), elementScrollEasing );
-				return false;
-			});
-		},
+                    const goToTopBtnEl = document.getElementById('gotoTop'); // предполагается, что у кнопки есть id="gotoTop"
+                    const elementScrollSpeed = parseInt(goToTopBtnEl.getAttribute('data-speed')) || 700;
+                
+                    if (!goToTopBtnEl) return;
+                
+                    goToTopBtnEl.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                },
+                
                 
                 onePageCurrentSection: function() {
                     
