@@ -647,7 +647,26 @@ var KRAFT = KRAFT || {};
                 map.setOptions( { styles: JSON.parse( map_style.toString() ) } );
                 
             },
-            
+            <script>
+function initMap() {
+  const mapElement = document.getElementById('googleMap_1');
+  if (!mapElement) return;
+
+  const lat = parseFloat(mapElement.getAttribute('data-latitude')) || 52.2459;
+  const lng = parseFloat(mapElement.getAttribute('data-longitude')) || 20.9221;
+  const zoom = parseInt(mapElement.getAttribute('data-zoom')) || 10;
+
+  const mapOptions = {
+    center: { lat, lng },
+    zoom: zoom,
+    mapTypeControl: false,
+    streetViewControl: false,
+    fullscreenControl: false,
+  };
+
+  new google.maps.Map(mapElement, mapOptions);
+}
+</script>
             initializeContactForm: function() {     
                 
                 var contactForm = $( '#contact-form' );
