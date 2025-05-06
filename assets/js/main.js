@@ -146,6 +146,7 @@ var KRAFT = KRAFT || {};
                 },               
 
                 onePageScroll: function() {
+                    const navigationEl = '.kraft-navigation'; // ← ДОБАВЬ ЭТУ СТРОКУ
                     const nav = document.querySelector(navigationEl);
                     if (!nav) return;
                 
@@ -175,7 +176,7 @@ var KRAFT = KRAFT || {};
                             nav.classList.remove('display-menu');
                         }
                     });
-                },
+                },                
                 
                 customPageScroll: function() {
                     const scrollLinks = document.querySelectorAll('.custom-scroll, .custom-scroll a');
