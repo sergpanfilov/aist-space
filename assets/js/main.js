@@ -638,11 +638,17 @@ var KRAFT = KRAFT || {};
 
                 var map = new google.maps.Map( google_map, map_options );
 
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng( latitude, longitude ),
-                    map: map,            
-                    icon: map_marker_img
-                });        
+                const markerElement = document.createElement('div');
+
+                if (map_marker_img) {
+                markerElement.innerHTML = `<img src="${map_marker_img}" style="width:32px;height:32px;">`;
+                }
+
+                const marker = new google.maps.marker.AdvancedMarkerElement({
+                position: new google.maps.LatLng(latitude, longitude),
+                map: map,
+                content: markerElement
+                });      
 
                 map.setOptions( { styles: JSON.parse( map_style.toString() ) } );
                 
