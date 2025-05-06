@@ -183,19 +183,17 @@ var KRAFT = KRAFT || {};
                 
                     scrollLinks.forEach(link => {
                         link.addEventListener('click', function(e) {
+                            const targetId = this.getAttribute('href');
+                            if (!targetId.startsWith('#')) return;
+                
+                            const targetEl = document.querySelector(targetId);
+                            if (!targetEl) return;
+                
                             e.preventDefault();
-                            const targetSelector = this.getAttribute('href');
-                            if (!targetSelector || !targetSelector.startsWith('#')) return;
-                
-                            const targetElement = document.querySelector(targetSelector);
-                            if (!targetElement) return;
-                
-                            targetElement.scrollIntoView({
-                                behavior: 'smooth'
-                            });
+                            targetEl.scrollIntoView({ behavior: 'smooth' });
                         });
                     });
-                },
+                },                
                 
                 goToTop: function() {
                     const goToTopBtnEl = document.getElementById('gotoTop'); // предполагается, что у кнопки есть id="gotoTop"
